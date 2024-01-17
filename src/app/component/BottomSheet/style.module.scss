@@ -1,0 +1,54 @@
+.bottomSheetContainer{
+    position: absolute;
+    width: calc(100% - 24px);
+    bottom: 16px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #fff;
+    border-radius: 16px;
+    padding-top: 32px;
+    box-shadow: #00000030 1px 0px 4px 0px;
+    button{
+        width: 95%;
+        height: 40px;
+        background-color: #0036a0;
+        border: 16px;
+        text-align: center;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 40px;
+        margin: 16px auto;
+        display: block;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        span{
+            position: relative;
+            z-index: 20;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 100%;
+            background-color: #0048da;
+            animation-name: buttonEffect;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+        }
+    }
+}
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+@keyframes buttonEffect {
+
+        from {right: 0;}
+        to {right: 100%;}
+      
+}
