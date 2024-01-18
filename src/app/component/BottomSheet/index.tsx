@@ -2,11 +2,15 @@ import React from "react";
 import styles from "./style.module.scss";
 import Price from "../price";
 import Address from "../address";
+import OfferPrice from "../offerPrice";
 
 const BottomSheet = () => {
   return (
     <div className={styles.bottomSheetContainer}>
       <Price price="555000" score="5" hasRefer={true}/>
+      <OfferPrice price="555000" score="5" hasRefer={false} step="next"/>
+      <OfferPrice price="555000" score="5" hasRefer={true} step="prev"/>
+
       <Address
         type={"start"}
         address="تهران، زعفرانیه، کوهرنگ،ارودوگاه شهید چمران
