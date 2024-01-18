@@ -8,4 +8,59 @@
         width: 100%;
         height: 100%;
     }
+    .hexagon {
+        width: 99px;
+        height: 85px;
+        -webkit-clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        background: #76817b57;
+        position: absolute;
+        top: 86px;
+        right: 105px;
+        transform: rotate(90deg);
+        &.id1{
+            right: 192px;
+        }
+        &.id2{
+            top: 164px;
+            right: 62px;
+        }
+        &.id3{
+            top: 163px;
+            right: 149px;
+        }
+        &.id4{
+            top: 163px;
+            right: 236px;
+        }
+        &.id5{
+            top: 240px;
+            right: 106px;
+        }
+        &.id6{
+            top: 240px;
+            right: 192px;
+        }
+        &.id7{
+            top: 316px;
+            right: 62px;
+        }
+        &.id8{
+            top: 316px;
+            right: 149px;
+        }
+        &.id9{
+            top: 316px;
+            right: 236px;
+        }
+        &.id10{
+            top: 392px;
+        }
+        &.id11{
+            right: 192px;
+            top: 392px;
+        }
+       
+    }
+    
 }
