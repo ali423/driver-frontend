@@ -1,0 +1,62 @@
+.offerPriceContainer{
+    position: absolute;
+    top: -68px;
+    // right: 3px;
+    display: flex;
+    margin-right: 20px;
+    &.next{
+        left: 25px;
+        .arrow{
+            right: calc(100% - 45px);
+            padding-right: 44px;
+            svg{
+                transform: rotateY(180deg);
+            }
+        }
+    }
+    &.prev{
+        right: 3px;
+        .arrow{
+        left: calc(100% - 45px);
+        padding-left: 44px;
+        }
+    }
+    p{
+        margin: 0;
+        line-height: 32px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+    }
+    .price{
+        background-color: #021c3e;
+        padding: 4px 8px;
+        display: flex;
+        align-items: center;
+        border-radius: 24px;
+        z-index: 2;
+        gap: 4px;
+    }
+    .arrow{
+        position: absolute;
+        z-index: -2;
+        border-radius: 24px;
+        background: #0048DA;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 4px;
+        font-size: 14px;
+        color: #fff;
+        height: 32px;
+        span{
+            line-height: 32px;
+        }
+
+    }
+    .score{
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+}
