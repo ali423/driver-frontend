@@ -1,8 +1,12 @@
-import React from "react";
+import React, { FC } from "react";
 import styles from "./style.module.scss";
 import { toPersian } from "@/app/function";
 
-const Eta = () => {
+interface IEta{
+  time:number
+}
+
+const EtaTime: FC<IEta>  = ({time}) => {
   return (
     <div className={styles.etaContainer}>
       <svg
@@ -19,10 +23,10 @@ const Eta = () => {
       </svg>
       <div className={styles.text}>
         <p>زمان تقریبی تا مبدا:</p>
-        <p>{toPersian(1)} دقیقه</p>
+        <p>{toPersian(time)} دقیقه</p>
       </div>
     </div>
   );
 };
 
-export default Eta;
+export default EtaTime;

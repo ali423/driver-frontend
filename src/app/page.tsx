@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Map from "./component/map";
-import Eta from "./component/eta";
+import EtaTime from "./component/eta";
 import BottomSheet from "./component/BottomSheet";
 import { useEffect, useState } from "react";
 const test = {
@@ -40,8 +40,8 @@ export default function Home() {
     fetchData();
   }, []);
   return (
-    <div className="hihi">
-      {data?.map(({ ID, OriginAreaId, DestinationAreaId }) => {
+    <div>
+      {data?.map(({ ID, OriginAreaId, DestinationAreaId, Eta }) => {
         return (
           <div key={ID}>
             {" "}
@@ -50,7 +50,7 @@ export default function Home() {
               OriginAreaId={OriginAreaId}
               DestinationAreaId={DestinationAreaId}
             />
-            <Eta />
+            <EtaTime time={Eta} />
             <BottomSheet />
           </div>
         );
