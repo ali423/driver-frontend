@@ -18,6 +18,9 @@
         top: 86px;
         right: 105px;
         transform: rotate(90deg);
+        &.active{
+            background-color: red;
+        }
         &.id1{
             right: 192px;
         }
