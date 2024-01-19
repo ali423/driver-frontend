@@ -27,7 +27,7 @@ interface IOffer {
 }
 export default function Home() {
   const [data, setData] = useState<IOffer[]>();
-
+  const [activeOffer, setActiveOffer] = useState(0);
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
@@ -41,20 +41,16 @@ export default function Home() {
   }, []);
   return (
     <div>
-      {data?.map(({ ID, OriginAreaId, DestinationAreaId, Eta }) => {
-        return (
-          <div key={ID}>
-            {" "}
-            {ID}
-            <Map
-              OriginAreaId={OriginAreaId}
-              DestinationAreaId={DestinationAreaId}
-            />
-            <EtaTime time={Eta} />
-            <BottomSheet />
-          </div>
-        );
-      })}
+      {data && (
+        <div>
+          <Map
+            OriginAreaId={data[activeOffer].OriginAreaId}
+            DestinationAreaId={data[activeOffer].DestinationAreaId}
+          />
+          <EtaTime time={data[activeOffer].Eta} />
+          <BottomSheet data={data} set={setData} activeOffer={activeOffer}/>
+        </div>
+      )}
     </div>
   );
 }

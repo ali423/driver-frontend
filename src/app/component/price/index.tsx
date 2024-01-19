@@ -3,9 +3,9 @@ import styles from "./style.module.scss";
 import { formatPrice, toPersian } from "@/app/function";
 
 interface IPrice {
-  price: string;
+  price: number;
   hasRefer: boolean;
-  score: string;
+  score: number;
 }
 
 const Price: FC<IPrice> = ({ price, hasRefer, score }) => {

@@ -3,9 +3,9 @@ import styles from "./style.module.scss";
 import { formatPrice, toPersian } from "@/app/function";
 
 interface IOfferPrice {
-  price: string;
+  price: number;
   hasRefer: boolean;
-  score: string;
+  score: number;
   step: string;
 }
 
