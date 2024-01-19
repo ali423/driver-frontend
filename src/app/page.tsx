@@ -5,6 +5,7 @@ import Map from "./component/map";
 import EtaTime from "./component/eta";
 import BottomSheet from "./component/BottomSheet";
 import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 interface IOffer {
   ID: number;
   Origin: string;
@@ -16,8 +17,8 @@ interface IOffer {
   Price: number;
 }
 export default function Home() {
-  const searchParams = new URLSearchParams(document.location.search);
-  const id = searchParams.get("id");
+  const searchParams = useSearchParams();
+  const  id  = searchParams.get("id");
   const [data, setData] = useState<IOffer[]>();
   const [activeOffer, setActiveOffer] = useState(0);
   useEffect(() => {
