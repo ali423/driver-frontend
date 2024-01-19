@@ -18,13 +18,13 @@ interface IOffer {
 }
 export default function Home() {
   const searchParams = useSearchParams();
-  const  id  = searchParams.get("id");
+  const id = searchParams.get("id");
   const [data, setData] = useState<IOffer[]>();
   const [activeOffer, setActiveOffer] = useState(0);
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        `http://188.121.117.228:8083/offer/list?driverId=${id}`
+        `http://188.121.117.228:8083/offer/list?driverId=${id ? id : 6}`
       );
       const data = await response.json();
       setData(data.data);
