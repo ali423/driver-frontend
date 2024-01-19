@@ -5,6 +5,11 @@
     transform: translateX(50%);
     display: flex;
     margin-right: 20px;
+    &.priceContainer2{
+        .price{
+            background-color: #0048DA;
+        }
+    }
     p{
         margin: 0;
         line-height: 36px;

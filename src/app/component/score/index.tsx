@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import styles from "./style.module.scss";
-import Coin from "./../../../../public/images/coint.jpg";
-import { formatPrice, toPersian } from "@/app/function";
+import Coin from "./../../../../public/images/coint.png";
 import Image from "next/image";
 
 const Score: FC = () => {
