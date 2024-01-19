@@ -7,14 +7,22 @@ interface IOfferPrice {
   hasRefer: boolean;
   score: number;
   step: string;
+  handleClick: () => void;
 }
 
-const OfferPrice: FC<IOfferPrice> = ({ price, hasRefer, score, step }) => {
+const OfferPrice: FC<IOfferPrice> = ({
+  price,
+  hasRefer,
+  score,
+  step,
+  handleClick,
+}) => {
   return (
     <div
       className={`${styles.offerPriceContainer} ${
         step === "next" ? styles.next : styles.prev
       }`}
+      onClick={ ()=>handleClick()}
     >
       <p className={styles.arrow}>
         <svg

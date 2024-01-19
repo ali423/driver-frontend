@@ -7,19 +7,24 @@
     img{
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
     .hexagon {
         width: 99px;
         height: 85px;
         -webkit-clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
         clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-        background: #76817b57;
+        
+        background: rgb(118 129 123 / 58%);
         position: absolute;
         top: 86px;
         right: 105px;
         transform: rotate(90deg);
-        &.active{
-            background-color: red;
+        &.Origin{
+            background-color: #0048da96;
+        }
+        &.Destination{
+            background-color: #021c3ecc;
         }
         &.id1{
             right: 192px;

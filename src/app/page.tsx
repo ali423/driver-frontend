@@ -48,7 +48,11 @@ export default function Home() {
             DestinationAreaId={data[activeOffer].DestinationAreaId}
           />
           <EtaTime time={data[activeOffer].Eta} />
-          <BottomSheet data={data} set={setData} activeOffer={activeOffer}/>
+          <BottomSheet
+            data={data}
+            set={setActiveOffer}
+            activeOffer={activeOffer}
+          />
         </div>
       )}
     </div>
