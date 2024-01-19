@@ -9,14 +9,14 @@ const Score: FC = () => {
       <p>امتیازهای کسب شده</p>
       <div className={styles.score}>
         <p>۰</p>
-        <p>۴۷</p>
-        <p>۱۰۰</p>
+        <p>۱۰</p>
+        <p>۲۰</p>
       </div>
       <div className={styles.line}></div>
       <div className={styles.description}>
         <Image src={Coin} alt="coin" />
         <p>
-          در این هفته، تا امروز ۲۴۷ سکّه کسب کردید و ۲۰۰ هزار تومان به کیف
+          در این هفته، تا امروز ۴ سکّه کسب کردید و ۲۰۰ هزار تومان به کیف
           پول‌تان اضافه شد.
         </p>
       </div>
